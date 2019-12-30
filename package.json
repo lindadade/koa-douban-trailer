@@ -18,6 +18,8 @@
   "author": "lindada",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.11.0"
+    "ejs": "^3.0.1",
+    "koa": "^2.11.0",
+    "pug": "^2.0.4"
   }
 }
