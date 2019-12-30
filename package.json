@@ -1,0 +1,23 @@
+{
+	"name": "koadoubantrailer",
+	"version": "1.0.0",
+	"description": "#### Description 学习Koa搭建豆瓣电影预告片网址",
+	"main": "server/index.js",
+	"scripts": {
+		"start": "node server/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://gitee.com/lin_daren/koaDo ubanTrailer.git"
+	},
+	"keywords": [
+		"movie",
+		"trailer"
+	],
+	"author": "lindada",
+	"license": "MIT",
+	"dependencies": {
+		"koa": "^2.11.0"
+	}
+}
