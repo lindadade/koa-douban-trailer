@@ -3,6 +3,7 @@ node_modules
 
 # Nuxt generate
 dist
+.cache
 
 # Build
 bulid

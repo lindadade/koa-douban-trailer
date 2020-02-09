@@ -1,0 +1,23 @@
+apps:
+  - script: ./server/index.js
+  name: 'Koa2'
+  env:
+    COMMON_VARIABLE: true
+  env_production:
+    NODE_ENV: production
+deploy:
+  production:
+    user: root
+    host:
+      - 193.112.72.189
+    port: 3001
+    ref: origin/master
+    repo:
+      https://gitee.com/lin_daren/koaDoubanTrailer.git
+    path:
+      /www/koa2-movie/production
+    ssh_options: StrictHostKeyChecking=no
+    pre-deploy: git fetch --all
+    post-deploy: 'npm install && npm run buildS && pm2 startOrRestart deploy.yaml --env production'
+    env:
+      NODE_ENV: production
