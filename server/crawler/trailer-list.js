@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer')
 
-const url = `https://movie.douban.com/tag/#/?sort=R&range=6,10&tags=`
+// const url = `https://movie.douban.com/tag/#/?sort=R&range=6,10&tags=`
+const url =`http://api.douban.com/v2/movie/${item.doubanId}?apikey=0df993c66c0c636e29ecbb5344252a4a`
 
 const sleep = time => new Promise(resolve => {
   setTimeout(resolve, time)
@@ -19,12 +20,12 @@ const sleep = time => new Promise(resolve => {
       waitUntil: 'networkidle2'
     })
 
-    await sleep(3000)
+    await sleep(1000)
 
     await page.waitForSelector('.more')
 
     for (let i = 0; i < 1; i++) {
-      await sleep(3000)
+      await sleep(1000)
       await page.click('.more')
     }
 
